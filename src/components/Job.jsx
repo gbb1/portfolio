@@ -8,7 +8,7 @@ const Job = ({ image, company, descriptions, title, dateRange }) => {
 
   return (
     <div className="border-2 flex flex-row gap-2 md:gap-6 p-2 md:p-4 rounded-lg">
-      <img className="max-h-screen circle-img" src={image} />
+      <img className="max-h-screen circle-img-sm md:circle-img" src={image} />
       <div className="flex flex-col w-full">
         <div className="flex flex-row flex-wrap justify-between w-full mb-2 md:mb-0">
           <div className="font-bold text-sm md:text-lg">{company}</div>
