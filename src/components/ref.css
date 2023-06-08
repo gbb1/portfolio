@@ -1,0 +1,49 @@
+@keyframes slideIn {
+  0% {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  100% {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+
+.slide-in {
+  animation-name: slideIn;
+  animation-duration: 1.2s;
+  animation-iteration-count: once;
+}
+
+.circle-img {
+  width: min(10vh, 10vw);
+  height: min(10vh, 10vw);
+  max-width: min(10vw, 50px);
+  max-height: min(10vw, 50px);
+}
+
+.icon {
+  font-size: 24px,
+}
+
+@media only screen and (min-width: 600px) {
+  .icon {
+    font-size: 24px,
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .icon {
+    font-size: 12px,
+  }
+}
+
+.glassy {
+  background-color: rgba(255, 255, 255, .15);
+  backdrop-filter: blur(5px);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 10vh;
+}
