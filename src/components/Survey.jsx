@@ -30,7 +30,7 @@ const Survey = () => {
         <ul className="menu w-full rounded-box gap-2 box-border">
           <div className="w-full hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg" onClick={handleClick}>
             <div className="flex">
-              <div id={1} className={`text-[12px] md:text-base ${(choice !== 1 && choice) ? `opacity-70` : ''} transition-all rounded-lg border-2 box-border px-4 py-3 w-full cursor-pointer select-none`}>
+              <div id={1} className={`text-[12px] md:text-base ${(choice !== 1 && choice) ? `opacity-70` : ''} transition-all rounded-lg border-2 dark:border-gray-600 box-border px-4 py-3 w-full cursor-pointer select-none`}>
               I reduced latency by over 95% with PostgreSQL aggregation queries, denormalization, and indexing.
               </div>
               <div className={`bg-green-200 ${choice ? `w-[${votes[1]}%] slide-in ` : 'w-[0px]'} ${votes.correect === 1 ? `bg-green-200` : 'bg-red-200'} -ml-[100%] rounded-lg opacity-50`}>
@@ -40,7 +40,7 @@ const Survey = () => {
           {/*  */}
           <div className="w-full hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg" onClick={handleClick}>
             <div className="flex">
-              <div id={2} className={`text-[12px] md:text-base ${(choice !== 2 && choice) ? `opacity-70` : ''} transition-all rounded-lg border-2 box-border px-4 py-3 w-full cursor-pointer select-none`}>
+              <div id={2} className={`text-[12px] md:text-base ${(choice !== 2 && choice) ? `opacity-70` : ''} transition-all rounded-lg border-2 dark:border-gray-600 box-border px-4 py-3 w-full cursor-pointer select-none`}>
               I helped Facebook acquire 50K+ advertisers by supporting UI/UX for over 20 growth products and features.
               </div>
               <div className={`bg-green-200 ${choice ? `w-[${votes[2]}%] slide-in ` : 'w-[0px]'} ${votes.correect === 2 ? `bg-green-200` : 'bg-red-200'} -ml-[100%] rounded-lg opacity-50`}>
@@ -50,7 +50,7 @@ const Survey = () => {
           {/*  */}
           <div className="w-full hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg" onClick={handleClick}>
             <div className="flex">
-              <div id={3} className={`text-[12px] md:text-base ${(choice !== 3 && choice) ? `opacity-70` : ''} transition-all rounded-lg border-2 box-border px-4 py-3 w-full cursor-pointer select-none`}>
+              <div id={3} className={`text-[12px] md:text-base ${(choice !== 3 && choice) ? `opacity-70` : ''} transition-all rounded-lg border-2 dark:border-gray-600 box-border px-4 py-3 w-full cursor-pointer select-none`}>
                 Correlation actually does imply causation.
               </div>
               <div className={`${choice ? `w-[${votes[3]}%] slide-in ` : 'w-[0px]'} ${votes.correct === 3 ? `bg-green-200` : 'bg-red-200'} -ml-[100%] rounded-lg opacity-50`}>

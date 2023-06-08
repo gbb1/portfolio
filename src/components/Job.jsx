@@ -7,7 +7,7 @@ import Facebook from '../assets/facebook.png'
 const Job = ({ image, company, descriptions, title, dateRange }) => {
 
   return (
-    <div className="border-2 dark:border-gray-200 flex flex-row gap-2 md:gap-6 p-2 md:p-4 rounded-lg">
+    <div className="border-2 dark:border-gray-600 flex flex-row gap-2 md:gap-6 p-2 md:p-4 rounded-lg">
       <img className="circle-img " src={image} />
       <div className="flex flex-col w-full">
         <div className="flex flex-row flex-wrap justify-between w-full mb-2 md:mb-0">
