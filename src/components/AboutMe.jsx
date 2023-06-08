@@ -17,7 +17,7 @@ import Attenda from '../assets/attendaLogo.png'
 import Icons from '../assets/icons3.png'
 import Diggr from '../assets/diggr2.png'
 
-const AboutMe = ({ scroller4, scroller2, scrollToProjRef, scrollToDiggr }) => { //scroller4
+const AboutMe = ({ scroller4, scroller2, scrollToProjRef, scrollToDiggr, oRef }) => { //scroller4
 
   const handleClick = (event) => {
     event.preventDefault();

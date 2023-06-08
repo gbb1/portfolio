@@ -98,7 +98,7 @@ function App() {
       <div ref={navRef} className="scrollable h-[0px]" ></div>
       <div className="flex justify-center mt-[12vh] md:mt-[10vh]">
         <div className="flex flex-col justify-center max-w-[600px] w-[90%] md:w-[80%] gap-2 md:gap-4">
-          <AboutMe scroller4={scrollToBackground} scrollToProjRef={scrollToProjRef} scrollToDiggr={scrollToDiggr} />
+          <AboutMe scroller4={scrollToBackground} scrollToProjRef={scrollToProjRef} scrollToDiggr={scrollToDiggr} oRef={overviewRef} />
           <Details />
           <div ref={backgroundRef} id="experience1" className="scrolledTo" >
             <Experience />
