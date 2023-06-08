@@ -52,7 +52,7 @@ export default function Projects() {
 
   return (
     <div className="flex flex-col w-full gap-4 mt-4">
-      <div className="font-bold text-xl md:text-4xl dark:text-white">
+      <div className="font-bold text-xl md:text-4xl dark:text-gray-200">
         My projects:
       </div>
 

@@ -12,13 +12,13 @@ import './ref.css';
 const Details = () => {
 
   return (
-    <div className="flex flex-col w-full bg-white dark:text-white dark:bg-gray-900 rounded-[20px] shadow-lg p-4 md:p-6">
+    <div className="flex flex-col w-full bg-white dark:text-gray-200 dark:bg-gray-900 rounded-[20px] shadow-lg p-4 md:p-6">
       <div className="flex flex-row items-center">
         <div className="flex flex-row items-center gap-3">
           <MdOutlineCake className="icon"  />
           <span className="text-[12px] md:text-[16px]">26</span>
         </div>
-        <hr className="bg-base-300 rounded-[100px] mx-2 md:mx-4 dark:bg-white" style={{ height: '100%', width: '2px' }}></hr>
+        <hr className="bg-base-300 rounded-[100px] mx-2 md:mx-4 dark:bg-gray-200" style={{ height: '100%', width: '2px' }}></hr>
         <div className="flex flex-row items-center gap-3">
           <HiOutlineLocationMarker className="icon" />
           <span className="text-[12px] md:text-[16px]">Open to remote, relocating</span>

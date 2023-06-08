@@ -7,7 +7,7 @@ import Facebook from '../assets/facebook.png'
 const Job = ({ image, company, descriptions, title, dateRange }) => {
 
   return (
-    <div className="border-2 flex flex-row gap-2 md:gap-6 p-2 md:p-4 rounded-lg">
+    <div className="border-2 dark:border-gray-200 flex flex-row gap-2 md:gap-6 p-2 md:p-4 rounded-lg">
       <img className="circle-img " src={image} />
       <div className="flex flex-col w-full">
         <div className="flex flex-row flex-wrap justify-between w-full mb-2 md:mb-0">
@@ -16,7 +16,7 @@ const Job = ({ image, company, descriptions, title, dateRange }) => {
             {
               descriptions.map((d, index) => {
                 return (
-                  <div key={d[0] + ',' + index} className="badge text-[10px] md:text-[16px] dark:bg-white dark:text-gray-900">{d}</div>
+                  <div key={d[0] + ',' + index} className="badge text-[10px] md:text-[16px] dark:bg-gray-200 dark:text-gray-900">{d}</div>
                 )
               })
             }

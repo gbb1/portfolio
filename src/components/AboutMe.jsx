@@ -31,10 +31,10 @@ const AboutMe = ({ scroller4, scroller2, scrollToProjRef, scrollToDiggr, oRef })
   return (
 
     <div className="flex flex-col max-h-min gap-2 pt-2 h-min md:max-h-[600px] z-1 md:h-min">
-      <div className="font-bold md:text-4xl text-xl dark:text-white">
+      <div className="font-bold md:text-4xl text-xl dark:text-gray-200">
         Hi! I'm Gabe.
       </div>
-      <div className="font-normal text-[12px] font-light md:text-xl mb-2 dark:text-white">
+      <div className="font-normal text-[12px] font-light md:text-xl mb-2 dark:text-gray-200">
         I'm a fullstack engineer with a background in Stats and Linguistics, and professional experience in UX design and marketing.
       </div>
       <div className="max-h-min md:max-h-[500px] md:h-[80%] rounded-[20px] flex flex-col gap-2 hover:gap-6 transition-all duration-100 ">
