@@ -11,7 +11,7 @@ const Footer = ({ scroller }) => {
   return (
     <div className="w-full bg-transparent flex justify-center flex-col mb-10 shadow-lg">
 
-      <div className="flex flex-col bg-white p-4 md:p-6 items-center rounded-[20px] w-full gap-2">
+      <div className="flex flex-col bg-white dark:bg-gray-900 dark:text-white p-4 md:p-6 items-center rounded-[20px] w-full gap-2">
 
         <div className="font-normal text-2xl md:text-6xl mb-2 mt-2 h-min">
           🤝

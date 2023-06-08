@@ -11,8 +11,8 @@ import '../App.css';
 export default function Project({ prompt, image, tags, flip, title, description, link, bg }) {
 
   return (
-    <div className="flex flex-col w-full" >
-      <div className={`flex flex-col gap-2 bg-white rounded-[20px] w-full shadow-lg p-4 md:p-6`}>
+    <div className="flex flex-col w-full dark:text-white" >
+      <div className={`flex flex-col gap-2 bg-white dark:bg-gray-900 rounded-[20px] w-full shadow-lg p-4 md:p-6`}>
 
         <div className="font-normal text-base md:text-2xl mb-2 mt-2">
           {prompt}
@@ -28,7 +28,7 @@ export default function Project({ prompt, image, tags, flip, title, description,
             {
               tags.map((t, i) => {
                 return (
-                  <div key={t[0] + ',' + i} className="badge text-[10px] md:text-[16px]">{t}</div>
+                  <div key={t[0] + ',' + i} className="badge text-[10px] md:text-[16px] dark:bg-white dark:text-gray-900">{t}</div>
                 )
               })
             }

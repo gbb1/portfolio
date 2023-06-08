@@ -12,7 +12,7 @@ import './ref.css';
 const TopBar2 = ({ barRef, scroller }) => {
 
   return (
-    <div ref={barRef} className="navbar bg-base-100 nav z-[1000] fixed">
+    <div ref={barRef} className="navbar bg-base-100 dark:bg-gray-800 nav z-[1000] fixed">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -25,7 +25,7 @@ const TopBar2 = ({ barRef, scroller }) => {
                 LinkedIn
               </a>
             </li>
-            <li><a className="rounded-[1000px] hover:bg-gray-200">
+            <li><a className="rounded-[1000px] hover:bg-gray-200 ">
 
               Github
               </a></li>

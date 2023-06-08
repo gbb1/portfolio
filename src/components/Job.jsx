@@ -16,7 +16,7 @@ const Job = ({ image, company, descriptions, title, dateRange }) => {
             {
               descriptions.map((d, index) => {
                 return (
-                  <div key={d[0] + ',' + index} className="badge text-[10px] md:text-[16px]">{d}</div>
+                  <div key={d[0] + ',' + index} className="badge text-[10px] md:text-[16px] dark:bg-white dark:text-gray-900">{d}</div>
                 )
               })
             }
