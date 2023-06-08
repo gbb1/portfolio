@@ -67,7 +67,7 @@ const TopBar2 = ({ barRef, scroller }) => {
               e.preventDefault()
               scroller()
             }}
-            className="justify-self-end py-3 px-5 md:mr-5 bg-black text-xs md:text-sm font-medium text-center text-white rounded-lg bg-primary-700 sm:w-fit hover:bg-[#5CDB95] hover:text-black ">Get in touch</button>
+            className="justify-self-end py-3 px-5 md:mr-5 bg-black text-xs md:text-sm font-medium text-center text-white dark:text-gray-200 rounded-lg bg-primary-700 sm:w-fit hover:bg-[#5CDB95] hover:text-black ">Get in touch</button>
         </a>
       </div>
     </div>
