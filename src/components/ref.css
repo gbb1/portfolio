@@ -17,16 +17,16 @@
 
 .circle-img {
   width: min(10vh, 10vw);
-  /* height: min(10vh, 10vw); */
+  height: min(10vh, 10vw);
   max-width: min(10vw, 50px);
-  /* max-height: min(10vw, 50px); */
+  max-height: min(10vw, 50px);
 }
 
-.circle-img-sm {
+/* .circle-img-sm {
   width: min(10vh, 10vw);
   height: min(10vh, 10vw);
   max-width: min(10vw, 50px);
-}
+} */
 
 .icon {
   font-size: 24px,
