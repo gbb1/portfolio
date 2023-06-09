@@ -20,10 +20,12 @@ import Diggr from '../assets/diggr2.png'
 const AboutMe = ({ scroller4, scroller2, scrollToProjRef, scrollToDiggr, oRef }) => { //scroller4
 
   const handleClick = (event) => {
+    console.log('clicked')
     event.preventDefault();
     if (event.target.id === 'diggrClick') {
       scrollToDiggr();
     } else {
+      console.log(oRef.current)
       scrollToProjRef(oRef)
     }
   }
@@ -38,9 +40,9 @@ const AboutMe = ({ scroller4, scroller2, scrollToProjRef, scrollToDiggr, oRef })
         I'm a fullstack engineer with a background in Stats and Linguistics, and professional experience in UX design and marketing.
       </div>
       <div className="max-h-min md:max-h-[500px] md:h-[80%] rounded-[20px] flex flex-col gap-2 hover:gap-6 transition-all duration-100 ">
-        <div className = "flex flex-row justify-between gap-2 hover:gap-6 md:h-[25vh] " onClick={handleClick}>
+        <div className = "flex flex-row justify-between gap-2 hover:gap-6 md:h-[25vh] ">
           {/*  */}
-          <div className="w-[33%] rounded-[20px]">
+          <div className="w-[33%] rounded-[20px] ">
             <Tilt className="w-full h-full rounded-[20px] ">
 
               <img
@@ -59,6 +61,7 @@ const AboutMe = ({ scroller4, scroller2, scrollToProjRef, scrollToDiggr, oRef })
           <Tilt className="w-[66%] rounded-[20px] hover:w-[70%]">
 
             <img
+              onClick={handleClick}
               options={{
                 max: 45,
                 scale: 1,
@@ -71,11 +74,12 @@ const AboutMe = ({ scroller4, scroller2, scrollToProjRef, scrollToDiggr, oRef })
           </Tilt>
 
         </div>
-        <div id="diggrClick" onClick={handleClick} className = "flex flex-row justify-between gap-2 hover:gap-6 md:h-[25vh] transition-all duration-100">
+        <div id="diggrClick" className = "flex flex-row justify-between gap-2 hover:gap-6 md:h-[25vh] transition-all duration-100">
           {/*  */}
           <Tilt className="w-[66%]  rounded-[20px] hover:w-[70%]">
 
               <img
+                onClick={handleClick}
                 id="diggrClick"
                 options={{
                   max: 45,
