@@ -22,7 +22,7 @@ const Footer = ({ scroller }) => {
           Designed by Gabe Bennett-Brandt
         </div>
 
-        <div className="md:text-24 self-center p-2 mt-2" onClick={scroller}>
+        <div className="md:text-24 self-center p-2 mt-2 cursor-pointer" onClick={scroller}>
           <BsArrowUpCircle style={{ fontSize: '32px' }} />
         </div>
 
