@@ -20,12 +20,12 @@ import Diggr from '../assets/diggr2.png'
 const AboutMe = ({ scroller4, scroller2, scrollToProjRef, scrollToDiggr, oRef }) => { //scroller4
 
   const handleClick = (event) => {
-    console.log('clicked')
+    // console.log('clicked')
     event.preventDefault();
     if (event.target.id === 'diggrClick') {
       scrollToDiggr();
     } else {
-      console.log(oRef.current)
+      // console.log(oRef.current)
       scrollToProjRef(oRef)
     }
   }
