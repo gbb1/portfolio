@@ -1,7 +1,7 @@
 import { LuGraduationCap } from 'react-icons/lu'
 import { HiOutlineLocationMarker } from 'react-icons/hi'
 import { MdOutlineCake } from 'react-icons/md'
-import { HiCodeBracket } from 'react-icons/hi2'
+import { HiCode } from 'react-icons/hi'
 import { HiOutlineDatabase } from 'react-icons/hi'
 
 import '../App.css';
@@ -29,7 +29,7 @@ const Details = () => {
       </div>
       <hr className="bg-base-300 rounded-[100px] my-2 md:my-4" style={{ height: '2px' }}></hr>
       <div className="flex flex-row items-center gap-3">
-        <HiCodeBracket className="icon"  />
+        <HiCode className="icon"  />
         <span className="text-[12px] md:text-[16px]">Javascript, Typescript, React, HTML5, CSS</span>
       </div>
       {/*  */}
