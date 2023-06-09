@@ -31,3 +31,21 @@
 html {
   scroll-behavior: smooth;
 }
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 400ms ease-in;
+}
+
+.rise-in {
+  transform: translateY(5%);
+  transition: transform 400ms ease-in;
+}
+
+.rise-in.appear {
+  transform: translateY(0);
+}
+
+.fade-in.appear {
+  opacity: 1;
+}

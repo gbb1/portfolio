@@ -17,17 +17,43 @@ import TopBar2 from './components/NavBar2';
 import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
 
   const navRef = useRef(null);
   const backgroundRef = useRef(null);
   const barRef = useRef(null);
 
   const overviewRef = useRef(null);
-  const diggrRef = useRef(null);
+  // const diggrRef = useRef(null);
 
   const contactRef = useRef(null);
 
+  const options = {
+    threshold: 1,
+    rootMargin: "0px 0px -40px 0px",
+  };
+
+  const appearOnScroll = new IntersectionObserver((entries, appearOnScroll) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) {
+        entry.target.classList.remove('appear');
+        return;
+      } else {
+        entry.target.classList.add('appear');
+        appearOnScroll.unobserve(entry.target);
+      }
+    })
+  }, options)
+
+  // useEffect(() => {
+  //   const faders = document.querySelectorAll('.fade-in')
+  //   faders.forEach(fader => {
+  //     appearOnScroll.observe(fader);
+  //   })
+
+  // }, [])
+
+
+  // const faders = document.querySelectorAll('.fade-in')
 
   const scrollToRef = () => {
     if (navRef.current) {
@@ -103,7 +129,9 @@ function App() {
           <div ref={backgroundRef} id="experience1" className="scrolledTo" >
             <Experience />
           </div>
-          <HackReactor />
+          <div className="">
+            <HackReactor />
+          </div>
           <Survey />
           <div ref={overviewRef} className="scrolledTo-project">
             <Projects />
