@@ -22,6 +22,11 @@
   margin-top: -75px;
 }
 
+.scrolledTo-contact {
+  padding-top: 75px;
+  margin-top: -75px;
+}
+
 
 html {
   scroll-behavior: smooth;

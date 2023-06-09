@@ -108,7 +108,7 @@ function App() {
           <div ref={overviewRef} className="scrolledTo-project">
             <Projects />
           </div>
-          <div ref={contactRef} className="scrolledTo" >
+          <div ref={contactRef} className="scrolledTo-contact" >
             <Contact />
           </div>
           <Footer scroller={scrollToRef} />
