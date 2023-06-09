@@ -115,7 +115,7 @@ function App() {
   };
 
   return (
-    <div onScroll={handleScroll} className=" w-screen h-screen bg-gradient-to-b from-white dark:from-gray-800 to-gray-200 dark:to-bg-gray-700 overflow-y-auto">
+    <div onScroll={handleScroll} className=" w-screen h-screen bg-gradient-to-b from-white dark:from-gray-800 to-gray-200 dark:to-bg-gray-700 overflow-y-auto scroll-box">
       <TopBar2 barRef={barRef} scroller={scrollToContact} />
       <div ref={navRef} className="scrollable h-[0px]" ></div>
       <div className="flex justify-center mt-[12vh] md:mt-[10vh]">

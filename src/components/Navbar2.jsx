@@ -9,7 +9,7 @@ import './ref.css';
 const TopBar2 = ({ barRef, scroller }) => {
 
   return (
-    <div ref={barRef} className="navbar bg-base-100 dark:bg-gray-800 nav z-[1000] fixed">
+    <div ref={barRef} className="navbar bg-base-100 dark:bg-gray-800 nav z-[10] fixed">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
