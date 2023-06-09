@@ -39,8 +39,8 @@ const AboutMe = ({ scroller4, scroller2, scrollToProjRef, scrollToDiggr, oRef })
       <div className="font-normal text-[12px] font-light md:text-xl mb-2 dark:text-gray-200">
         I'm a fullstack engineer with a background in Stats and Linguistics, and professional experience in UX design and marketing.
       </div>
-      <div className="max-h-min md:max-h-[500px] md:h-[80%] rounded-[20px] flex flex-col gap-2 hover:gap-6 transition-all duration-100 ">
-        <div className = "flex flex-row justify-between gap-2 hover:gap-6 md:h-[25vh] ">
+      <div className="max-h-min md:max-h-[500px] md:h-[80%] rounded-[20px] flex flex-col gap-2 md:hover:gap-6 transition-all duration-100 ">
+        <div className = "flex flex-row justify-between gap-2 md:hover:gap-6 md:h-[25vh] ">
           {/*  */}
           <div className="w-[33%] rounded-[20px] ">
             <Tilt className="w-full h-full rounded-[20px] ">
@@ -58,7 +58,7 @@ const AboutMe = ({ scroller4, scroller2, scrollToProjRef, scrollToDiggr, oRef })
             </Tilt>
           </div>
           {/*  */}
-          <Tilt className="w-[66%] rounded-[20px] hover:w-[70%]">
+          <Tilt className="w-[66%] rounded-[20px] md:hover:w-[70%]">
 
             <img
               onClick={handleClick}
@@ -74,9 +74,9 @@ const AboutMe = ({ scroller4, scroller2, scrollToProjRef, scrollToDiggr, oRef })
           </Tilt>
 
         </div>
-        <div id="diggrClick" className = "flex flex-row justify-between gap-2 hover:gap-6 md:h-[25vh] transition-all duration-100">
+        <div id="diggrClick" className = "flex flex-row justify-between gap-2 md:hover:gap-6 md:h-[25vh] transition-all duration-100">
           {/*  */}
-          <Tilt className="w-[66%]  rounded-[20px] hover:w-[70%]">
+          <Tilt className="w-[66%]  rounded-[20px] md:hover:w-[70%]">
 
               <img
                 onClick={handleClick}
@@ -92,7 +92,7 @@ const AboutMe = ({ scroller4, scroller2, scrollToProjRef, scrollToDiggr, oRef })
 
           </Tilt>
           {/*  */}
-          <div id="experience" className="w-[33%] rounded-[20px] hover:w-[36%] transition ease-in-out" onClick={scroller4}>
+          <div id="experience" className="w-[33%] rounded-[20px] md:hover:w-[36%] transition ease-in-out" onClick={scroller4}>
             <Tilt className="w-full h-full rounded-[20px]">
 
               <img
