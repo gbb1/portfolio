@@ -1,10 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
 
-import { Tilt } from 'react-tilt';
-import { motion } from 'framer-motion';
-
-import { fadeIn, textVariant } from '../utils/motion';
-
 import '../App.css';
 
 

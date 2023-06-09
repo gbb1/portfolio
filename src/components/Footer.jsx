@@ -1,10 +1,6 @@
-import { useState, useEffect, useRef } from 'react'
 import { BsArrowUpCircle } from 'react-icons/bs'
 
-
 import '../App.css';
-
-
 
 const Footer = ({ scroller }) => {
 

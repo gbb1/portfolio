@@ -1,8 +1,6 @@
-import { useState, useEffect } from 'react'
 
 import '../App.css';
 import './ref.css';
-import Facebook from '../assets/facebook.png'
 
 const Job = ({ image, company, descriptions, title, dateRange }) => {
 

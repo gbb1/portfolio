@@ -2,8 +2,6 @@ import { useState, useEffect } from 'react'
 
 import '../App.css';
 import Job from './Job'
-import Facebook from '../assets/facebook.png'
-import Koalafi from '../assets/Koalafi.png'
 import HR from '../assets/hr.png'
 
 export default function HackReactor() {

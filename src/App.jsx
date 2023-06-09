@@ -1,12 +1,9 @@
+/* eslint-disable no-unused-vars */
 import { useState, useRef, useEffect } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 
 import AboutMe from './components/AboutMe';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
-// import About from './components3/About';
-// import TopBar from './components/TopBar';
 import Survey from './components/Survey';
 import Details from './components/Details';
 import Footer from './components/Footer';
@@ -23,7 +20,6 @@ function App() {
   const barRef = useRef(null);
 
   const overviewRef = useRef(null);
-  // const diggrRef = useRef(null);
 
   const contactRef = useRef(null);
 

@@ -1,10 +1,7 @@
-import { useState, useEffect, useRef } from 'react'
+
 import { ImLinkedin } from 'react-icons/im'
 import { FaGithub } from 'react-icons/fa'
-import { HiOutlineMail } from 'react-icons/hi'
 import { IoDocumentText } from 'react-icons/io5'
-
-import { IconContext } from "react-icons";
 
 import '../App.css';
 import './ref.css';
