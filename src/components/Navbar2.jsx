@@ -22,12 +22,12 @@ const TopBar2 = ({ barRef, scroller }) => {
                 LinkedIn
               </a>
             </li>
-            <li><a className="rounded-[1000px] hover:bg-gray-200 ">
+            <li><a href="https://github.com/gbb1" className="rounded-[1000px] hover:bg-gray-200 ">
 
               Github
               </a></li>
             <li>
-              <a className="">
+              <a href="https://docs.google.com/document/d/1ivp3T9r42I55LnupSHLONfWlL2pfw2ZtWDLzAZCxBbk/edit?usp=sharing" className="">
 
                 View resume
               </a>
