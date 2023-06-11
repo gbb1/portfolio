@@ -11,6 +11,10 @@ import HackReactor from './components/HR';
 import Contact from './components/Contact';
 import TopBar2 from './components/NavBar2';
 
+import { getDatabase, ref, set } from "firebase/database";
+
+import { db } from '../firebaseConfig.js';
+
 import './App.css';
 
 function App() {
@@ -61,7 +65,7 @@ function App() {
   };
 
   const scrollToBackground = () => {
-    // console.log('clicked this one')
+
     if (backgroundRef.current) {
       backgroundRef.current.scrollIntoView({
         behavior: 'smooth',
@@ -72,7 +76,7 @@ function App() {
   };
 
   const scrollToDiggr = () => {
-    // console.log('clicked this one')
+
     const element = document.getElementById('Diggr');
     if (element) {
      element.scrollIntoView({
@@ -84,7 +88,7 @@ function App() {
   };
 
   const scrollToContact = () => {
-    // console.log('clicked this one')
+
     if (contactRef.current) {
       contactRef.current.scrollIntoView({
         behavior: 'smooth',
@@ -113,6 +117,31 @@ function App() {
       barRef.current.classList.remove('transition-all');
     }
   };
+
+
+  const writeUserData = async (session) => {
+    let date = new Date();
+    date = date.toString();
+    if (session) {
+      set(ref(db, 'visits/' + date), {
+        start: session,
+      });
+    } else {
+      set(ref(db, 'visits/' + date), {
+        end: session,
+      });
+    }
+  }
+
+  useEffect(() => {
+    writeUserData(true)
+      .catch((err) => console.log(err))
+
+    return () => {
+      writeUserData(false)
+        .catch((err) => console.log(err))
+    }
+  }, [])
 
   return (
     <div onScroll={handleScroll} className=" w-screen h-screen bg-gradient-to-b from-white dark:from-gray-800 to-gray-200 dark:to-bg-gray-700 overflow-y-auto scroll-box">

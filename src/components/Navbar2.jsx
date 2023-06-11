@@ -2,11 +2,14 @@
 import { ImLinkedin } from 'react-icons/im'
 import { FaGithub } from 'react-icons/fa'
 import { IoDocumentText } from 'react-icons/io5'
+import { useRef } from 'react'
 
 import '../App.css';
 import './ref.css';
 
 const TopBar2 = ({ barRef, scroller }) => {
+
+  const menuRef = useRef(null);
 
   return (
     <div ref={barRef} className="navbar bg-base-100 dark:bg-gray-800 nav z-[10] fixed">
