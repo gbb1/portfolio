@@ -30,7 +30,7 @@ const TopBar2 = ({ barRef, scroller }) => {
               Github
               </a></li>
             <li>
-              <a href="https://docs.google.com/document/d/1ivp3T9r42I55LnupSHLONfWlL2pfw2ZtWDLzAZCxBbk/edit?usp=sharing" className="rounded-[1000px] hover:bg-gray-200 ">
+              <a href="https://drive.google.com/file/d/1RjDptTqouGQgILhTy2MIXARcYXZuB5Hx/view?usp=sharing" className="rounded-[1000px] hover:bg-gray-200 ">
 
                 View resume
               </a>
@@ -53,7 +53,7 @@ const TopBar2 = ({ barRef, scroller }) => {
               <FaGithub />
             </div>
             </a></li>
-            <li><a title="Resume" href="https://docs.google.com/document/d/1ivp3T9r42I55LnupSHLONfWlL2pfw2ZtWDLzAZCxBbk/edit?usp=sharing" className="rounded-[1000px] hover:bg-gray-200">
+            <li><a title="Resume" href="https://drive.google.com/file/d/1RjDptTqouGQgILhTy2MIXARcYXZuB5Hx/view?usp=sharing" className="rounded-[1000px] hover:bg-gray-200">
             <div className="rounded-[1000px] scale-[150%]">
               <IoDocumentText />
             </div>
