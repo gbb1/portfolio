@@ -27,6 +27,10 @@
   margin-top: -75px;
 }
 
+.scroll-box {
+  z-index: 0;
+}
+
 
 html {
   scroll-behavior: smooth;

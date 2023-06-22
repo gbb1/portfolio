@@ -20,7 +20,7 @@ const TopBar = ({ barRef }) => {
 
 
   return (
-    <div ref={barRef} className="bg-white nav z-[1000] flex flex-row w-full fixed justify-end items-center h-min max-h-[12vh] md:h-[4vh] md:max-h-min md:p-8 border-box">
+    <div ref={barRef} className="bg-white nav z-[10] flex flex-row w-full fixed justify-end items-center h-min max-h-[12vh] md:h-[4vh] md:max-h-min md:p-8 border-box">
 {/*
       <div className="scale-[150%] min-h-min">
         <ImLinkedin />

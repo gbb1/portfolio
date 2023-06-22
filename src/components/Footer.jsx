@@ -5,7 +5,7 @@ import '../App.css';
 const Footer = ({ scroller }) => {
 
   return (
-    <div className="w-full bg-transparent flex justify-center flex-col mb-10 shadow-lg">
+    <div className="w-full bg-transparent flex justify-center flex-col mb-10 shadow-lg rounded-[20px]">
 
       <div className="flex flex-col bg-white dark:bg-gray-900 dark:text-gray-200 p-4 md:p-6 items-center rounded-[20px] w-full gap-2">
 
@@ -22,7 +22,7 @@ const Footer = ({ scroller }) => {
           Designed by Gabe Bennett-Brandt
         </div>
 
-        <div className="md:text-24 self-center p-2 mt-2 cursor-pointer z-[10]" onClick={scroller}>
+        <div className="md:text-24 self-center p-2 mt-2 cursor-pointer z-auto" onClick={scroller}>
           <BsArrowUpCircle style={{ fontSize: '32px' }} />
         </div>
 

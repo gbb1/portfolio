@@ -12,7 +12,8 @@ const TopBar2 = ({ barRef, scroller }) => {
   const menuRef = useRef(null);
 
   return (
-    <div ref={barRef} className="navbar bg-base-100 dark:bg-gray-800 nav z-[10] fixed">
+  <div className="flex flex-row justify-center">
+    <div ref={barRef} className="navbar bg-base-100 dark:bg-gray-800 nav z-[9] md:w-[98%] fixed rounded-md">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -67,11 +68,11 @@ const TopBar2 = ({ barRef, scroller }) => {
               e.preventDefault()
               scroller()
             }}
-            className="justify-self-end py-3 px-5 md:mr-5 bg-black text-xs md:text-sm font-medium text-center text-white dark:text-gray-200 rounded-lg bg-primary-700 sm:w-fit md:hover:bg-[#5CDB95] md:hover:text-black  active:hover:bg-[#5CDB95] active:hover:text-black">Get in touch</button>
+            className="justify-self-end py-3 px-5 mr-2 md:mr-5 bg-black text-xs md:text-sm font-medium text-center text-white dark:text-gray-200 rounded-lg bg-primary-700 sm:w-fit md:hover:bg-[#5CDB95] md:hover:text-black  active:hover:bg-[#5CDB95] active:hover:text-black">Get in touch</button>
         </a>
       </div>
     </div>
-
+  </div>
 
   )
 }

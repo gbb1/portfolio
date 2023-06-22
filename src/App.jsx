@@ -135,6 +135,8 @@ function App() {
   }
 
   useEffect(() => {
+    // window.addEventListener("scroll", (e) => { return handleScroll(e) })
+
     writeUserData(true)
       .catch((err) => console.log(err))
 
@@ -145,36 +147,38 @@ function App() {
   }, [])
 
   return (
-    <div onScroll={handleScroll} className=" w-screen h-screen bg-gradient-to-b from-white dark:from-gray-800 to-gray-200 dark:to-bg-gray-700 overflow-y-auto scroll-box">
-      <TopBar2 barRef={barRef} scroller={scrollToContact} />
-      <div ref={navRef} className="scrollable h-[0px]" ></div>
-      <div className="flex justify-center mt-[12vh] md:mt-[10vh]">
-        <div className="flex flex-col justify-center max-w-[600px] w-[90%] md:w-[80%] gap-2 md:gap-4">
-          <div className="hidden md:block">
-            <AboutMe scroller4={scrollToBackground} scrollToProjRef={scrollToProjRef} scrollToDiggr={scrollToDiggr} oRef={overviewRef} />
+    <div className=" w-screen min-h-screen bg-gradient-to-b from-white dark:from-gray-800 to-gray-200 dark:to-bg-gray-700">
+      <div onScroll={handleScroll} className=" w-screen h-[100vh] overflow-y-auto scroll-box">
+        <TopBar2 barRef={barRef} scroller={scrollToContact} />
+        <div ref={navRef} className="scrollable h-[0px]" ></div>
+        <div className="flex justify-center mt-[12vh] md:mt-[10vh]">
+          <div className="flex flex-col justify-center max-w-[600px] w-[90%] md:w-[80%] gap-2 md:gap-4">
+            <div className="hidden md:block">
+              <AboutMe scroller4={scrollToBackground} scrollToProjRef={scrollToProjRef} scrollToDiggr={scrollToDiggr} oRef={overviewRef} />
+            </div>
+            <div className="md:hidden">
+              <AboutMeMobile scroller4={scrollToBackground} scrollToProjRef={scrollToProjRef} scrollToDiggr={scrollToDiggr} oRef={overviewRef} />
+            </div>
+            <Details />
+            <div ref={backgroundRef} id="experience1" className="scrolledTo" >
+              <Experience />
+            </div>
+            <div className="">
+              <HackReactor />
+            </div>
+            <Survey />
+            <div ref={overviewRef} className="scrolledTo-project">
+              <Projects />
+            </div>
+            <div ref={contactRef} className="scrolledTo-contact" >
+              <Contact />
+            </div>
+            <Footer scroller={scrollToRef} />
+            <div className="h-[0px] z-[20]" ></div>
           </div>
-          <div className="md:hidden">
-            <AboutMeMobile scroller4={scrollToBackground} scrollToProjRef={scrollToProjRef} scrollToDiggr={scrollToDiggr} oRef={overviewRef} />
-          </div>
-          <Details />
-          <div ref={backgroundRef} id="experience1" className="scrolledTo" >
-            <Experience />
-          </div>
-          <div className="">
-            <HackReactor />
-          </div>
-          <Survey />
-          <div ref={overviewRef} className="scrolledTo-project">
-            <Projects />
-          </div>
-          <div ref={contactRef} className="scrolledTo-contact" >
-            <Contact />
-          </div>
-          <Footer scroller={scrollToRef} />
-          <div className="h-[0px]" ></div>
         </div>
-      </div>
-    </div >
+      </div >
+    </div>
   )
 }
 
