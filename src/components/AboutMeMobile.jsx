@@ -32,9 +32,9 @@ const AboutMeMobile = ({ scroller4, scroller2, scrollToProjRef, scrollToDiggr, o
         I'm a fullstack engineer with a background in Stats and Linguistics, and professional experience in UX design and marketing.
       </div>
       <div className="max-h-min md:max-h-[500px] md:h-[80%] rounded-[20px] flex flex-col gap-2 transition-all duration-100">
-        <div className = "flex flex-row justify-between gap-2 transition-all duration-100" >
+        <div className = "flex flex-row justify-between gap-2 transition-all duration-10" >
           {/*  */}
-          <div className="w-[33%] rounded-[20px] transition-all duration-100" >
+          <div className="w-[33%] rounded-[20px] transition-all duration-10" >
               <img
                 options={{
                   max: 45,
@@ -56,7 +56,7 @@ const AboutMeMobile = ({ scroller4, scroller2, scrollToProjRef, scrollToDiggr, o
               className="rounded-[20px] bg-[#379683] w-[66%] rounded-[20px] active:opacity-75  cursor-pointer md:hover:w-[70%] focus:w-[70%] transition-all duration-10 h-full object-cover"
             />
         </div>
-        <div id="diggrClick" className = "flex flex-row justify-between gap-2 transition-all duration-100 ">
+        <div id="diggrClick" className = "flex flex-row justify-between gap-2 transition-all duration-10 ">
             <img
               onClick={handleClick}
               id="diggrClick"
@@ -66,7 +66,7 @@ const AboutMeMobile = ({ scroller4, scroller2, scrollToProjRef, scrollToDiggr, o
                 speed: 30,
               }}
               src={Diggr}
-              className="rounded-[20px] bg-[#8ee4af] h-full w-[66%] active:opacity-75 rounded-[20px] cursor-pointer md:hover:w-[70%] focus:w-[70%] object-cover"
+              className="rounded-[20px] bg-[#8ee4af] h-full w-[66%] active:opacity-75 transition-all duration-10 rounded-[20px] cursor-pointer md:hover:w-[70%] focus:w-[70%] object-cover"
             />
           <div id="experience" className="w-[33%] rounded-[20px] active:opacity-75 transition-all duration-10" onClick={scroller4}>
               <img
