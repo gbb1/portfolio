@@ -2,6 +2,7 @@
 import { useState, useRef, useEffect } from 'react'
 
 import AboutMe from './components/AboutMe';
+import AboutMeMobile from './components/AboutMeMobile';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Survey from './components/Survey';
@@ -149,7 +150,12 @@ function App() {
       <div ref={navRef} className="scrollable h-[0px]" ></div>
       <div className="flex justify-center mt-[12vh] md:mt-[10vh]">
         <div className="flex flex-col justify-center max-w-[600px] w-[90%] md:w-[80%] gap-2 md:gap-4">
-          <AboutMe scroller4={scrollToBackground} scrollToProjRef={scrollToProjRef} scrollToDiggr={scrollToDiggr} oRef={overviewRef} />
+          <div className="hidden md:block">
+            <AboutMe scroller4={scrollToBackground} scrollToProjRef={scrollToProjRef} scrollToDiggr={scrollToDiggr} oRef={overviewRef} />
+          </div>
+          <div className="md:hidden">
+            <AboutMeMobile scroller4={scrollToBackground} scrollToProjRef={scrollToProjRef} scrollToDiggr={scrollToDiggr} oRef={overviewRef} />
+          </div>
           <Details />
           <div ref={backgroundRef} id="experience1" className="scrolledTo" >
             <Experience />

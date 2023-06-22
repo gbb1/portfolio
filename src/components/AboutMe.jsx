@@ -25,7 +25,6 @@ const AboutMe = ({ scroller4, scroller2, scrollToProjRef, scrollToDiggr, oRef })
     if (event.target.id === 'diggrClick') {
       scrollToDiggr();
     } else {
-      // console.log(oRef.current)
       scrollToProjRef(oRef)
     }
   }
@@ -52,7 +51,7 @@ const AboutMe = ({ scroller4, scroller2, scrollToProjRef, scrollToDiggr, oRef })
                   speed: 30,
                 }}
                 src={Profile}
-                className="rounded-[20px] bg-[#1D3557] w-full h-full object-cover "
+                className="rounded-[20px] bg-[#1D3557] w-full h-full object-cover select-none"
               />
 
             </Tilt>
@@ -68,7 +67,7 @@ const AboutMe = ({ scroller4, scroller2, scrollToProjRef, scrollToDiggr, oRef })
                 speed: 30,
               }}
               src={Overview}
-              className="rounded-[20px] bg-[#379683] w-full h-full object-cover"
+              className="rounded-[20px] bg-[#379683] w-full h-full object-cover select-none"
             />
 
           </Tilt>
@@ -87,7 +86,7 @@ const AboutMe = ({ scroller4, scroller2, scrollToProjRef, scrollToDiggr, oRef })
                   speed: 30,
                 }}
                 src={Diggr}
-                className="rounded-[20px] bg-[#8ee4af] w-full h-full object-cover"
+                className="rounded-[20px] bg-[#8ee4af] w-full h-full object-cover select-none"
               />
 
           </Tilt>
@@ -103,7 +102,7 @@ const AboutMe = ({ scroller4, scroller2, scrollToProjRef, scrollToDiggr, oRef })
                   speed: 30,
                 }}
                 src={Icons}
-                className="rounded-[20px] w-full bg-[#5cdb95] h-full object-cover"
+                className="rounded-[20px] w-full bg-[#5cdb95] h-full object-cover select-none"
               />
 
             </Tilt>
