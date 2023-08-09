@@ -5,10 +5,20 @@ import Overview from '../assets/OverviewBlank.png'
 import Hooks from '../assets/hooksBlank.png'
 import Diggr from '../assets/diggr2.png'
 import Attenda from '../assets/attendaBlank.png'
+import Alt from '../assets/AltBlank.png'
 
 export default function Projects() {
 
   const content = [
+    {
+      prompt: 'My new productivity tool is...',
+      image: Alt,
+      title: 'alt.',
+      tags: ['Typescript', 'Firestore Database', 'Firebase Auth'],
+      description: 'A project workspace for Content Designers inspired by Figma, Trello, and Google Docs, made for desktop.',
+      link: 'https://altdesign.vercel.app',
+      bg: '#374196',
+    },
     {
       prompt: 'My favorite place to shop is...',
       image: Overview,
