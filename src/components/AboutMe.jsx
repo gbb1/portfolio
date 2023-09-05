@@ -39,7 +39,7 @@ const AboutMe = ({ scroller4, scroller2, scrollToProjRef, scrollToDiggr, oRef })
         I'm a fullstack engineer with a background in Stats and Linguistics, and professional experience in UX design and marketing.
       </div>
       <div className="max-h-min md:max-h-[500px] md:h-[80%] rounded-[20px] flex flex-col gap-2 md:hover:gap-6 hover:gap-4 hover:mb-2 transition-all duration-100">
-        <div className = "flex flex-row justify-between gap-2 md:hover:gap-6 hover:gap-4 focus:gap-6 md:h-[200px] focus:h-[25vh] transition-all duration-100 md:max-h-[20vh]">
+        <div className = "flex flex-row justify-between gap-2 md:hover:gap-6 hover:gap-4 focus:gap-6 md:h-[200px] focus:h-[25vh] transition-all duration-100">
           {/*  */}
           <div className="w-[33%] md:hover:w-[36%] focus:w-[36%] rounded-[20px] transition-all duration-100">
             <Tilt className="w-full h-full rounded-[20px] ">
@@ -73,7 +73,7 @@ const AboutMe = ({ scroller4, scroller2, scrollToProjRef, scrollToDiggr, oRef })
           </Tilt>
 
         </div>
-        <div id="diggrClick" className = "flex flex-row justify-between gap-2 md:hover:gap-6 hover:gap-4 focus:gap-6 md:h-[200px] transition-all duration-100 md:max-h-[20vh]">
+        <div id="diggrClick" className = "flex flex-row justify-between gap-2 md:hover:gap-6 hover:gap-4 focus:gap-6 md:h-[200px] transition-all duration-100 ">
           {/*  */}
           <Tilt className="w-[66%] rounded-[20px] md:hover:w-[70%] focus:w-[70%]">
 
