@@ -159,7 +159,9 @@ function App() {
             <div className="md:hidden">
               <AboutMeMobile scroller4={scrollToBackground} scrollToProjRef={scrollToProjRef} scrollToDiggr={scrollToDiggr} oRef={overviewRef} />
             </div>
-            <Details />
+            <div className="">
+              <Details />
+            </div>
             <div ref={backgroundRef} id="experience1" className="scrolledTo" >
               <Experience />
             </div>

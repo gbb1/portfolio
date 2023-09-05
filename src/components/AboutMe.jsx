@@ -31,15 +31,15 @@ const AboutMe = ({ scroller4, scroller2, scrollToProjRef, scrollToDiggr, oRef })
 
   return (
 
-    <div className="flex flex-col max-h-min gap-2 pt-2 h-min md:max-h-[600px] z-1 md:h-min">
+    <div className="flex flex-col max-h-min gap-2 pt-2 h-min md:max-h-[600px] z-1 md:h-min ">
       <div className="font-bold md:text-4xl text-xl dark:text-gray-200">
         Hi! I'm Gabe.
       </div>
       <div className="font-normal text-[12px] font-light md:text-xl mb-2 dark:text-gray-200">
         I'm a fullstack engineer with a background in Stats and Linguistics, and professional experience in UX design and marketing.
       </div>
-      <div className="max-h-min md:max-h-[500px] md:h-[80%] rounded-[20px] flex flex-col gap-2 md:hover:gap-6 hover:gap-4 hover:mb-2  transition-all duration-100 ">
-        <div className = "flex flex-row justify-between gap-2 md:hover:gap-6 hover:gap-4 focus:gap-6 md:h-[25vh] focus:h-[25vh] transition-all duration-100">
+      <div className="max-h-min md:max-h-[500px] md:h-[80%] rounded-[20px] flex flex-col gap-2 md:hover:gap-6 hover:gap-4 hover:mb-2 transition-all duration-100">
+        <div className = "flex flex-row justify-between gap-2 md:hover:gap-6 hover:gap-4 focus:gap-6 md:h-[200px] focus:h-[25vh] transition-all duration-100 md:max-h-[20vh]">
           {/*  */}
           <div className="w-[33%] md:hover:w-[36%] focus:w-[36%] rounded-[20px] transition-all duration-100">
             <Tilt className="w-full h-full rounded-[20px] ">
@@ -73,9 +73,9 @@ const AboutMe = ({ scroller4, scroller2, scrollToProjRef, scrollToDiggr, oRef })
           </Tilt>
 
         </div>
-        <div id="diggrClick" className = "flex flex-row justify-between gap-2 md:hover:gap-6 hover:gap-4 focus:gap-6 md:h-[25vh] transition-all duration-100">
+        <div id="diggrClick" className = "flex flex-row justify-between gap-2 md:hover:gap-6 hover:gap-4 focus:gap-6 md:h-[200px] transition-all duration-100 md:max-h-[20vh]">
           {/*  */}
-          <Tilt className="w-[66%]  rounded-[20px] md:hover:w-[70%] focus:w-[70%]">
+          <Tilt className="w-[66%] rounded-[20px] md:hover:w-[70%] focus:w-[70%]">
 
               <img
                 onClick={handleClick}
