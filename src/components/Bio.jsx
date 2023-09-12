@@ -9,7 +9,8 @@ const Bio = ({ scroll }) => {
 
   const viewportHeight = window.innerHeight;
 
-  const percentage = scroll >= 0 ? Math.min(100, viewportHeight * 2 / scroll) : 100
+  // const percentage = scroll >= 0 ? Math.min(100, viewportHeight * 2 / scroll) : 100
+  const percentage = 100
 
   return (
    <div className={`absolute w-full h-full z-[9] flex flex-col items-start ease-in-out opacity-[${percentage}%]`} style={{ translate: `0px ${scroll}px`}}>
