@@ -15,6 +15,26 @@
   animation-iteration-count: once;
 }
 
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    /* transform: translate(0, 100) */
+  }
+  100% {
+    opacity: 100;
+    /* transform: translate(0, 0) */
+  }
+}
+
+.slide-up {
+  transform: scale(1.1);
+  animation-name: slideUp;
+  animation-duration: .5s;
+  animation-iteration-count: once;
+  transition-timing-function: ease-in-out;
+}
+
+
 .circle-img {
   width: min(10vh, 10vw);
   height: min(10vh, 10vw);
@@ -27,6 +47,10 @@
   height: min(10vh, 10vw);
   max-width: min(10vw, 50px);
 } */
+
+.scrollTarget {
+  scroll-margin-top: 64px;
+}
 
 .icon {
   font-size: 24px,

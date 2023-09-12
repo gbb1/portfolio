@@ -12,6 +12,9 @@ import HackReactor from './components/HR';
 import Contact from './components/Contact';
 import TopBar2 from './components/NavBar2';
 
+import Parallax from './components/Parallax'
+import ParallaxMobile from './components/ParallaxMobile'
+
 import { getDatabase, ref, set } from "firebase/database";
 
 import { db } from '../firebaseConfig.js';
@@ -24,9 +27,12 @@ function App() {
   const backgroundRef = useRef(null);
   const barRef = useRef(null);
 
+  const detailsRef = useRef(null);
   const overviewRef = useRef(null);
 
   const contactRef = useRef(null);
+
+  const [scroll, setScroll] = useState(0)
 
   const options = {
     threshold: 1,
@@ -76,6 +82,18 @@ function App() {
     }
   };
 
+  const scrollToDetails = () => {
+
+    if (detailsRef.current) {
+      const target = detailsRef.current.offsetTop - 100
+      detailsRef.current.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+        top: `${target}`,
+      });
+    }
+  };
+
   const scrollToDiggr = () => {
 
     const element = document.getElementById('Diggr');
@@ -117,6 +135,8 @@ function App() {
       barRef.current.classList.remove('shadow-md');
       barRef.current.classList.remove('transition-all');
     }
+
+    setScroll(event.target.scrollTop)
   };
 
 
@@ -135,14 +155,24 @@ function App() {
   }
 
   useEffect(() => {
-    // window.addEventListener("scroll", (e) => { return handleScroll(e) })
 
     writeUserData(true)
       .catch((err) => console.log(err))
 
+    const handleScroll = () => {
+      console.log('whats up')
+      let y = window.pageYOffset
+      // if (y > parallax.current.scrollHeight) return
+      // setScrollY(window.pageYOffset)
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+
     return () => {
       writeUserData(false)
         .catch((err) => console.log(err))
+      window.removeEventListener('scroll', handleScroll);
     }
   }, [])
 
@@ -154,12 +184,14 @@ function App() {
         <div className="flex justify-center mt-[2vh] md:mt-[4vh]">
           <div className="flex flex-col justify-center max-w-[600px] w-[90%] md:w-[80%] gap-2 md:gap-4">
             <div className="hidden md:block">
+              {/* <Parallax /> */}
               <AboutMe scroller4={scrollToBackground} scrollToProjRef={scrollToProjRef} scrollToDiggr={scrollToDiggr} oRef={overviewRef} />
             </div>
             <div className="md:hidden">
-              <AboutMeMobile scroller4={scrollToBackground} scrollToProjRef={scrollToProjRef} scrollToDiggr={scrollToDiggr} oRef={overviewRef} />
+              <ParallaxMobile scroll={scroll} scrollTo={scrollToDetails} />
+              {/* <AboutMeMobile scroller4={scrollToBackground} scrollToProjRef={scrollToProjRef} scrollToDiggr={scrollToDiggr} oRef={overviewRef} /> */}
             </div>
-            <div className="">
+            <div ref={detailsRef} className="scrollTarget">
               <Details />
             </div>
             <div ref={backgroundRef} id="experience1" className="scrolledTo" >

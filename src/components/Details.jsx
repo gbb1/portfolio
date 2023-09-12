@@ -10,7 +10,7 @@ import './ref.css';
 const Details = () => {
 
   return (
-    <div className="flex flex-col w-full bg-white dark:text-gray-200 dark:bg-gray-900 rounded-[20px] shadow-lg p-4 md:p-6">
+    <div className="flex flex-col w-full bg-white dark:text-gray-200 dark:bg-gray-900 rounded-lg md:rounded-[20px] shadow-lg p-4 md:p-6">
       <div className="flex flex-row items-center">
         <div className="flex flex-row items-center gap-3">
           <MdOutlineCake className="icon"  />
