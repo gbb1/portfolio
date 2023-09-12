@@ -26,7 +26,7 @@ export default function Project({ prompt, image, tags, flip, title, description,
 
           <img src={image} className={`rounded-lg shadow-lg bg-[${bg}]`} />
 
-          <div className="flex flex-row gap-2 w-full mt-2">
+          <div className="flex flex-row flex-wrap gap-2 w-full mt-2">
             {
               tags.map((t, i) => {
                 return (
