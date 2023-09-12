@@ -1,11 +1,11 @@
 import { useState, useEffect, useRef } from 'react'
 
-import front from '../assets/frontMobile.png'
-import front2 from '../assets/front2Mobile.png'
-import mid from '../assets/midMobile.png'
-import midback from '../assets/midbackMobile.png'
-import background from '../assets/backgroundMobile.png'
-import sky from '../assets/skyMobile.png'
+import front from '../assets/frontMobile-min.png'
+import front2 from '../assets/front2Mobile-min.png'
+import mid from '../assets/midMobile-min.png'
+import midback from '../assets/midbackMobile-min.png'
+import background from '../assets/backgroundMobile-min.png'
+import sky from '../assets/skyMobile-min.png'
 
 import { IoChevronDownOutline } from 'react-icons/io5'
 
@@ -56,12 +56,12 @@ const ParallaxMobile = ({ scroll, scrollTo }) => {
         </div>
       </button>
       <img className={`absolute object-top object-cover w-full h-full z-10 slide-up`} style={{ translate: `0px ${.3 * Math.max(0, scroll)}px`, transform: `scale(1.1)`}} src={front} />
-      <img className={`absolute object-top object-cover w-full h-full z-[8] slide-up`} style={{ translate: `0px ${.4 * Math.max(0, scroll)}px`, transform: `scale(1.1)`}} src={front2} />
+      <img className={`absolute object-top object-cover  w-full h-full z-[8] slide-up`} style={{ translate: `0px ${.4 * Math.max(0, scroll)}px`, transform: `scale(1.1)`}} src={front2} />
       <Bio scroll={scroll} />
-      <img className={`absolute object-top object-cover w-full h-full z-[6] slide-up`} style={{ translate: `0px ${.5 * Math.max(0, scroll)}px`, transform: `scale(1.1)`}} src={mid} />
-      <img className={`absolute object-top object-cover w-full h-full z-[4] backdrop-blur-[.5px] slide-up`} style={{ translate: `0px ${.6 * Math.max(0, scroll)}px`, transform: `scale(1.1)`}} src={midback} />
-      <img className={`absolute object-top object-cover w-full h-full z-[2] backdrop-blur-[1px] slide-up`} style={{ translate: `0px ${.8 * Math.max(0, scroll)}px`, transform: `scale(1.1)`}} src={background} />
-      <img className={`absolute object-top object-cover w-full h-full z-0 slide-up`} style={{ translate: `0px 0px`, transform: `scale(1.1)`}} src={sky} />
+      <img className={`absolute object-top object-cover  w-full h-full z-[6] slide-up`} style={{ translate: `0px ${.5 * Math.max(0, scroll)}px`, transform: `scale(1.1)`}} src={mid} />
+      <img className={`absolute object-top object-cover  w-full h-full z-[4] backdrop-blur-[.5px] slide-up`} style={{ translate: `0px ${.6 * Math.max(0, scroll)}px`, transform: `scale(1.1)`}} src={midback} />
+      <img className={`absolute object-top object-cover  w-full h-full z-[2] backdrop-blur-[1px] slide-up`} style={{ translate: `0px ${.8 * Math.max(0, scroll)}px`, transform: `scale(1.1)`}} src={background} />
+      <img className={`absolute object-top object-cover  w-full h-full z-0 slide-up`} style={{ translate: `0px 0px`, transform: `scale(1.1)`}} src={sky} />
     </div>
    </div>
   )
