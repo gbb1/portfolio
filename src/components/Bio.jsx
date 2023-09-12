@@ -9,8 +9,10 @@ const Bio = ({ scroll }) => {
 
   const viewportHeight = window.innerHeight;
 
+  const percentage = Math.min(100, viewportHeight * 2 / scroll)
+
   return (
-   <div className={`absolute w-full h-full z-[9] flex flex-col items-start ease-in-out opacity-[${viewportHeight * 2 / scroll}%]`} style={{ translate: `0px ${scroll}px`}}>
+   <div className={`absolute w-full h-full z-[9] flex flex-col items-start ease-in-out opacity-[${percentage}%]`} style={{ translate: `0px ${scroll}px`}}>
     <div className="mt-6 flex flex-col bg-white bg-opacity-[0%] items-start gap-2 relative">
       <div className="flex flex-row relative justify-items-start justify-start items-start grid w-full px-4 pt-4">
         <img className="object-cover max-w-[100px] max-h-[100px] w-[20vw] md:w-[10vw] rounded-full border-[2px] dark:border-gray-900" src={profile} />
