@@ -138,7 +138,9 @@ function App() {
       barRef.current.classList.remove('transition-all');
     }
 
-    setScroll(event.target.scrollTop)
+    if (event.target.scrollTop > 0) {
+      setScroll(event.target.scrollTop)
+    }
   };
 
 
@@ -161,25 +163,15 @@ function App() {
     writeUserData(true)
       .catch((err) => console.log(err))
 
-    const handleScroll = () => {
-      console.log('whats up')
-      let y = window.pageYOffset
-      // if (y > parallax.current.scrollHeight) return
-      // setScrollY(window.pageYOffset)
-    }
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-
 
     return () => {
       writeUserData(false)
         .catch((err) => console.log(err))
-      window.removeEventListener('scroll', handleScroll);
     }
   }, [])
 
   return (
-    <div className=" w-screen min-h-screen bg-gradient-to-b from-white dark:from-gray-800 to-gray-200 dark:to-bg-gray-700">
+    <div className=" w-screen min-h-screen bg-gradient-to-b from-white dark:from-gray-800 to-gray-200 dark:to-bg-gray-700 box-border">
       <div onScroll={handleScroll} className=" w-screen h-[100vh] overflow-y-scroll scroll-box">
         <TopBar2 barRef={barRef} scroller={scrollToContact} />
         <div ref={navRef} className="scrollable h-[0px] scrollTarget" ></div>

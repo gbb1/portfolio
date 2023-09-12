@@ -13,7 +13,7 @@ const TopBar2 = ({ barRef, scroller }) => {
 
   return (
   // <div className="flex flex-row justify-center">
-    <div ref={barRef} className="navbar bg-base-100 dark:bg-gray-800 nav z-[13] sticky top-0">
+    <div ref={barRef} className="navbar bg-base-100 dark:bg-gray-800 nav z-[13] sticky top-0 box-border">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
