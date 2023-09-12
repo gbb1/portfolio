@@ -39,7 +39,7 @@ const ParallaxMobile = ({ scroll, scrollTo }) => {
 
 
   if (loading) return (
-    <div className="animate-pulse w-full h-[60vh] rounded-lg bg-gray-200">
+    <div className="animate-pulse w-full h-[60vh] min-h-[450px] rounded-lg bg-gray-200">
       {/* <div className="bg-white max-w-full h-full rounded-lg relative overflow-hidden">
         <Bio scroll={scroll} />
       </div> */}

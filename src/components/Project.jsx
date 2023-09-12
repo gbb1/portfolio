@@ -14,7 +14,7 @@ export default function Project({ prompt, image, tags, flip, title, description,
 
   return (
     <div className="flex flex-col w-full dark:text-gray-200" >
-      <div className={`flex flex-col gap-2 bg-white dark:bg-gray-900 rounded-[20px] w-full shadow-lg p-4 md:p-6`}>
+      <div className={`flex flex-col gap-2 bg-white dark:bg-gray-900 rounded-lg md:rounded-[20px] w-full shadow-lg p-4 md:p-6`}>
 
         <div className="font-normal text-base md:text-2xl mb-2 mt-2">
           {prompt}

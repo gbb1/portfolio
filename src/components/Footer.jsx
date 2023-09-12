@@ -5,9 +5,9 @@ import '../App.css';
 const Footer = ({ scroller }) => {
 
   return (
-    <div className="w-full bg-transparent flex justify-center flex-col mb-10 shadow-lg rounded-[20px]">
+    <div className="w-full bg-transparent flex justify-center flex-col mb-10 shadow-lg rounded-lg md:rounded-[20px]">
 
-      <div className="flex flex-col bg-white dark:bg-gray-900 dark:text-gray-200 p-4 md:p-6 items-center rounded-[20px] w-full gap-2">
+      <div className="flex flex-col bg-white dark:bg-gray-900 dark:text-gray-200 p-4 md:p-6 items-center rounded-lg md:rounded-[20px] w-full gap-2">
 
         <div className="font-normal text-2xl md:text-6xl mb-2 mt-2 h-min">
           🤝

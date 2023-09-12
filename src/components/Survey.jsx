@@ -22,7 +22,7 @@ const Survey = () => {
   }
 
   return (
-    <div className="flex flex-col gap-2 w-full bg-white dark:bg-gray-900 dark:text-gray-200 rounded-[20px] shadow-lg p-4 md:p-6">
+    <div className="flex flex-col gap-2 w-full bg-white dark:bg-gray-900 dark:text-gray-200 rounded-lg md:rounded-[20px] shadow-lg p-4 md:p-6">
       <div className="font-normal text-base md:text-2xl mb-2 mt-2">
         Two truths and a lie...
       </div>

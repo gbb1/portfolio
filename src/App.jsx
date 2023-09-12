@@ -63,10 +63,12 @@ function App() {
   // const faders = document.querySelectorAll('.fade-in')
 
   const scrollToRef = () => {
+    console.log('running')
     if (navRef.current) {
       navRef.current.scrollIntoView({
         behavior: 'smooth',
         block: 'start',
+        top: `-100`,
       });
     }
   };
@@ -89,7 +91,7 @@ function App() {
       detailsRef.current.scrollIntoView({
         behavior: 'smooth',
         block: 'start',
-        top: `${target}`,
+        top: `${detailsRef.current.offsetTop}`,
       });
     }
   };
@@ -180,7 +182,7 @@ function App() {
     <div className=" w-screen min-h-screen bg-gradient-to-b from-white dark:from-gray-800 to-gray-200 dark:to-bg-gray-700">
       <div onScroll={handleScroll} className=" w-screen h-[100vh] overflow-y-scroll scroll-box">
         <TopBar2 barRef={barRef} scroller={scrollToContact} />
-        <div ref={navRef} className="scrollable h-[0px]" ></div>
+        <div ref={navRef} className="scrollable h-[0px] scrollTarget" ></div>
         <div className="flex justify-center mt-[2vh] md:mt-[4vh]">
           <div className="flex flex-col justify-center max-w-[600px] w-[90%] md:w-[80%] gap-2 md:gap-4">
             <div className="hidden md:block">

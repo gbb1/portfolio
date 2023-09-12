@@ -17,7 +17,7 @@ const Contact = () => {
 
   return (
 
-    <section className="bg-white dark:bg-gray-900 rounded-[20px] shadow-lg">
+    <section className="bg-white dark:bg-gray-900 rounded-lg md:rounded-[20px] shadow-lg">
       <div className="p-4 md:p-6 mx-auto max-w-screen-md">
           <div className="font-normal text-base md:text-2xl mt-2 mb-3 md:mb-6 dark:text-gray-200">
             Get in touch
