@@ -63,7 +63,6 @@ function App() {
   // const faders = document.querySelectorAll('.fade-in')
 
   const scrollToRef = () => {
-    console.log('running')
     if (navRef.current) {
       navRef.current.scrollIntoView({
         behavior: 'smooth',
@@ -179,7 +178,8 @@ function App() {
       <div ref={navRef} className="scrollable h-[0px] scrollTarget" ></div>
       <div className="flex flex-col justify-center max-w-[600px] w-[90%] md:w-[80%] gap-2 md:gap-4">
         <div className="hidden md:block">
-          <AboutMe scroller4={scrollToBackground} scrollToProjRef={scrollToProjRef} scrollToDiggr={scrollToDiggr} oRef={overviewRef} />
+          {/* <AboutMe scroller4={scrollToBackground} scrollToProjRef={scrollToProjRef} scrollToDiggr={scrollToDiggr} oRef={overviewRef} /> */}
+          <Parallax scroll={scroll} onClick={() => scrollToProjRef(overviewRef)} toDetails={scrollToDetails} />
         </div>
         <div className="md:hidden">
           <ParallaxMobile scroll={scroll} scrollTo={scrollToDetails} />
