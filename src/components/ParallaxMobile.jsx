@@ -50,7 +50,7 @@ const ParallaxMobile = ({ scroll, scrollTo }) => {
   return (
    <div className="bg-transparent w-full h-[60vh] min-h-[450px] flex flex-col">
     <div ref={parallax} className="bg-transparent max-w-full h-full rounded-lg relative overflow-hidden ">
-      <button onClick={scrollTo} className="absolute bottom-4 right-[45%] z-[12] object-bottom bg-white dark:text-gray-200 dark:bg-gray-900 w-[9vw] h-[9vw] rounded-full backdrop-blur-2px bg-opacity-[20%]">
+      <button onClick={scrollTo} className="absolute bottom-4 right-[45%] z-[12] object-bottom bg-white dark:text-gray-200 dark:bg-gray-900 w-[9vw] h-[9vw] max-w-[30px] max-h-[30px] rounded-full backdrop-blur-2px bg-opacity-[20%]">
         <div className="flex flex-row items-center justify-center active:opacity-75">
           <IoChevronDownOutline color="white"/>
         </div>

@@ -124,7 +124,7 @@ const ParallaxView2 = ({ scroll, onClick, toDetails }) => {
       <img className={`absolute object-top object-cover w-full h-full z-[8] transition-all  duration-100 ease-in-out `} style={{ translate: `${.5 * mousePos.x}px ${.4 * mousePos.y}px`, transform: `scale(1.2)`}} src={front2} />
       <img className={`absolute object-top object-cover w-full h-full z-[6] transition-all  duration-100 ease-in-out `} style={{ translate: `${.4 * mousePos.x}px ${.2 * mousePos.y}px`, transform: `scale(1.2)`}} src={mid} />
       {/* <img className={`absolute object-top object-cover w-full h-full z-[4] transition-all  duration-100 ease-in-out backdrop-blur-[.5px]`} style={{ translate: `${.3 *mousePos.x}px ${.3 * mousePos.y}px`, transform: `scale(1.1)`}} src={midback} /> */}
-      <img className={`absolute object-top object-cover w-full h-full z-[2] transition-all  duration-100 ease-in-out backdrop-blur-[1px]`} style={{ translate: `${.1 * mousePos.x}px ${.2 * mousePos.y}px`, transform: `scale(1.1)`}} src={background} />
+      <img className={`absolute object-top object-cover w-full h-full z-[2] transition-all  duration-100 ease-in-out backdrop-blur-[1px]`} style={{ translate: `${10 + .1 * mousePos.x}px ${.2 * mousePos.y}px`, transform: `scale(1.1)`}} src={background} />
       <img className={`absolute object-top object-cover w-full h-full z-0 transition-all  duration-100 ease-in-out `} style={{ translate: `${.1 * mousePos.x}px ${.05 * mousePos.y}px`, transform: `scale(1.2)`}} src={sky} />
     </div>
    </div>
