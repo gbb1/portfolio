@@ -11,12 +11,32 @@ import { IoChevronDownOutline } from 'react-icons/io5'
 
 import Bio from './Bio'
 
+import useObserver from '../hooks/useObserver'
+
+import {
+  useTransition,
+  useSpring,
+  useChain,
+  animated,
+  useSpringRef,
+} from '@react-spring/web';
+
 
 const ParallaxMobile = ({ scroll, scrollTo }) => {
   const parallax = useRef(null)
   const [loading, setLoading] = useState(true)
 
   const images = [front, front2, mid, midback, background, sky];
+
+  const style = useSpring({
+    config: { duration: 500 },
+    from: { opacity: 0, transform: 'translateY(10%)' },
+    to: {
+      opacity: 1,
+      transform: 'translateY(0%)',
+    },
+    delay: 50,
+  });
 
   const allImagesLoaded = () => {
     const imageLoadPromises = images.map((image) => {
@@ -55,12 +75,12 @@ const ParallaxMobile = ({ scroll, scrollTo }) => {
           <IoChevronDownOutline color="white"/>
         </div>
       </button>
-      <img className={`absolute object-top object-cover w-full h-full z-10 slide-up`} style={{ translate: `0px ${43 + -.15 * Math.max(0, scroll)}px`, transform: `scale(1.1) `}} src={front} />
-      <img className={`absolute object-top object-cover w-full h-full z-[8] slide-up`} style={{ translate: `0px ${43 + -.1 * Math.max(0, scroll)}px`, transform: `scale(1.1) `}} src={front2} />
+      <img className={`absolute object-top object-cover w-full h-full z-10 slide-up`} style={{ translate: `0px ${43}px`, transform: `scale(1.1) `}} src={front} />
+      <img className={`absolute object-top object-cover w-full h-full z-[8] slide-up`} style={{ translate: `0px ${43}px`, transform: `scale(1.1) `}} src={front2} />
       <Bio scroll={scroll} />
       <img className={`absolute object-top object-cover w-full h-full z-[6] slide-up`} style={{ translate: `0px ${43}px`, transform: `scale(1.1)`}} src={mid} />
       {/* <img className={`absolute object-top object-cover w-full h-full z-[4] backdrop-blur-[.5px] slide-up`} style={{ translate: `0px ${45 + .3 * Math.max(0, scroll)}px`, transform: `scale(1.1) translateZ(0)`}} src={midback} /> */}
-      <img className={`absolute object-top object-cover w-full h-full z-[2] backdrop-blur-[1px] slide-up`} style={{ translate: `0px ${.2 * Math.max(0, scroll)}px`, transform: `scale(1.1)`}} src={background} />
+      <img className={`absolute object-top object-cover w-full h-full z-[2] backdrop-blur-[1px] slide-up`} style={{ translate: `0px ${0}px`, transform: `scale(1.1)`}} src={background} />
       {/* <img className={`absolute object-top object-cover w-full h-full z-0 slide-up`} style={{ translate: `0px 20px`, transform: `scale(1.1)`}} src={sky} /> */}
     </div>
    </div>
@@ -69,3 +89,8 @@ const ParallaxMobile = ({ scroll, scrollTo }) => {
 }
 
 export default ParallaxMobile
+
+
+//+ -.15 * Math.max(0, scroll)
+// + -.1 * Math.max(0, scroll)
+// .2 * Math.max(0, scroll)

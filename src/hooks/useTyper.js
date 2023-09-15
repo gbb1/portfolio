@@ -88,7 +88,7 @@ const useTyper = (text, status, rand = false) => {
       index++
       promises.push(promise)
     }
-    Promise.all(promises).then(() => console.log('done')).catch(err => err)
+    Promise.all(promises).then().catch(err => err)
   }
 
 
@@ -98,7 +98,7 @@ const useTyper = (text, status, rand = false) => {
     if (status) {
       if (rand) {
         fillLettersRand()
-        // fillLettersOutIn()
+         // fillLettersOutIn()
       } else {
         fillLetters()
       }
