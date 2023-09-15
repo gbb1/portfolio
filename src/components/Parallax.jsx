@@ -13,7 +13,7 @@ import useObserver from '../hooks/useObserver'
 
 import { IoChevronDownOutline } from 'react-icons/io5'
 
-const ParallaxView2 = ({ scroll, onClick, toDetails }) => {
+const ParallaxView2 = ({ scroll, onClick, toDetails, observer }) => {
 
   const parallax = useRef(null)
   const imageRef = useRef(null)
@@ -120,7 +120,7 @@ const ParallaxView2 = ({ scroll, onClick, toDetails }) => {
         </div>
       </button> */}
       <img className={`absolute object-top object-cover w-full h-full z-10 transition-all  duration-100 ease-in-out touch-auto`} style={{ translate: `${.7 * mousePos.x}px ${.6 * mousePos.y}px`, transform: `scale(1.2)`}} src={front} />
-      <Bio scroll={scroll} />
+      <Bio scroll={scroll} observer={observer} />
       <img className={`absolute object-top object-cover w-full h-full z-[8] transition-all  duration-100 ease-in-out `} style={{ translate: `${.5 * mousePos.x}px ${.4 * mousePos.y}px`, transform: `scale(1.2)`}} src={front2} />
       <img className={`absolute object-top object-cover w-full h-full z-[6] transition-all  duration-100 ease-in-out `} style={{ translate: `${.4 * mousePos.x}px ${.2 * mousePos.y}px`, transform: `scale(1.2)`}} src={mid} />
       {/* <img className={`absolute object-top object-cover w-full h-full z-[4] transition-all  duration-100 ease-in-out backdrop-blur-[.5px]`} style={{ translate: `${.3 *mousePos.x}px ${.3 * mousePos.y}px`, transform: `scale(1.1)`}} src={midback} /> */}

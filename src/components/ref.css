@@ -17,11 +17,11 @@
 
 @keyframes slideUp {
   0% {
-    opacity: 0;
+    opacity: 0%;
     /* transform: translate(0, 100) */
   }
   100% {
-    opacity: 100;
+    opacity: 100%;
     /* transform: translate(0, 0) */
   }
 }
@@ -33,6 +33,25 @@
   animation-iteration-count: once;
   transition-timing-function: ease-in-out;
 }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0%;
+    /* transform: translate(0, 100) */
+  }
+  100% {
+    opacity: 100%;
+    /* transform: translate(0, 0) */
+  }
+}
+
+.slide-up {
+  animation-name: fadeIn;
+  animation-duration: .2s;
+  animation-iteration-count: once;
+  transition-timing-function: ease-in-out;
+}
+
 
 
 .circle-img {

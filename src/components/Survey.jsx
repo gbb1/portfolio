@@ -3,6 +3,17 @@ import { useState, useEffect, useRef } from 'react'
 import '../App.css';
 import './ref.css';
 
+import useTyper from '../hooks/useTyper'
+import useObserver from '../hooks/useObserver'
+
+import {
+  useTransition,
+  useSpring,
+  useChain,
+  animated,
+  useSpringRef,
+} from '@react-spring/web';
+
 const Survey = () => {
 
   const [choice, setChoice] = useState(null);
@@ -13,6 +24,20 @@ const Survey = () => {
     'correct': 3,
   })
 
+  const ref = useRef(null)
+  const observer = useObserver(ref, { freezeOnceVisible: true, threshold: 0.4});
+  const title = useTyper("Two truths and a lie...", observer?.isIntersecting, false)
+
+  const style = useSpring({
+    config: { duration: 500 },
+    from: { opacity: 0, transform: 'translateY(10%)' },
+    to: {
+      opacity: observer?.isIntersecting ? 1 : 0,
+      transform: observer?.isIntersecting ? 'translateY(0%)' : 'translateY(10%)',
+    },
+    delay: 50,
+  });
+
 
   const handleClick = (event) => {
     event.preventDefault();
@@ -22,9 +47,9 @@ const Survey = () => {
   }
 
   return (
-    <div className="flex flex-col gap-2 w-full bg-white dark:bg-gray-900 dark:text-gray-200 rounded-lg md:rounded-[20px] shadow-lg p-4 md:p-6">
+    <animated.div ref={ref} style={style} className="flex flex-col gap-2 w-full bg-white dark:bg-gray-900 dark:text-gray-200 rounded-lg md:rounded-[20px] shadow-lg p-4 md:p-6">
       <div className="font-normal text-base md:text-2xl mb-2 mt-2">
-        Two truths and a lie...
+        {title}
       </div>
       <div>
         <ul className="menu w-full rounded-box gap-2 box-border">
@@ -61,7 +86,7 @@ const Survey = () => {
         </ul>
       </div>
 
-    </div>
+    </animated.div>
   )
 }
 

@@ -13,6 +13,7 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@react-spring/web": "^9.7.3",
     "@react-three/fiber": "^8.13.0",
     "firebase": "^9.22.2",
     "framer-motion": "^10.12.16",

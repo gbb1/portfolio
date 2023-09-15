@@ -1,10 +1,26 @@
 
-import { useState } from 'react'
+import { useState, useRef } from 'react'
+
+import useTyper from '../hooks/useTyper'
+import useObserver from '../hooks/useObserver'
+
+import {
+  useTransition,
+  useSpring,
+  useChain,
+  animated,
+  useSpringRef,
+} from '@react-spring/web';
 
 const Contact = () => {
 
   const [subject, setSubject] = useState('Let\'s connect 👋');
   const [message, setMessage] = useState('');
+
+  const ref = useRef(null)
+  const observer = useObserver(ref, { freezeOnceVisible: true, threshold: 0.4 });
+  const title = useTyper("Get in touch", observer?.isIntersecting, false)
+
 
   const handleInput = (event) => {
     event.preventDefault();
@@ -17,10 +33,10 @@ const Contact = () => {
 
   return (
 
-    <section className="bg-white dark:bg-gray-900 rounded-lg md:rounded-[20px] shadow-lg">
+    <section ref={ref} className="bg-white dark:bg-gray-900 rounded-lg md:rounded-[20px] shadow-lg">
       <div className="p-4 md:p-6 mx-auto max-w-screen-md">
           <div className="font-normal text-base md:text-2xl mt-2 mb-3 md:mb-6 dark:text-gray-200">
-            Get in touch
+            {title}
           </div>
           <form action="#" className="space-y-5 flex flex-col ">
               <div>

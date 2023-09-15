@@ -1,9 +1,33 @@
 import { useState, useEffect, useRef } from 'react'
 
 import '../App.css';
+import useObserver from '../hooks/useObserver'
+import useTyper from '../hooks/useTyper'
+
+import {
+  useTransition,
+  useSpring,
+  useChain,
+  animated,
+  useSpringRef,
+} from '@react-spring/web';
 
 
 export default function Project({ prompt, image, tags, flip, title, description, link, bg }) {
+
+  const projRef = useRef(null)
+  const observer = useObserver(projRef, { freezeOnceVisible: true, threshold: 0.4 });
+  const prompt_typed = useTyper(prompt, observer?.isIntersecting, false)
+
+  const style = useSpring({
+    config: { duration: 500 },
+    from: { opacity: 0, transform: 'translateY(10%)' },
+    to: {
+      opacity: observer?.isIntersecting ? 1 : 0,
+      transform: observer?.isIntersecting ? 'translateY(0%)' : 'translateY(10%)',
+    },
+    delay: 50,
+  });
 
   const aRef = useRef(null)
 
@@ -13,11 +37,11 @@ export default function Project({ prompt, image, tags, flip, title, description,
   }
 
   return (
-    <div className="flex flex-col w-full dark:text-gray-200" >
+    <animated.div ref={projRef} style={style} className="flex flex-col w-full dark:text-gray-200" >
       <div className={`flex flex-col gap-2 bg-white dark:bg-gray-900 rounded-lg md:rounded-[20px] w-full shadow-lg p-4 md:p-6`}>
 
         <div className="font-normal text-base md:text-2xl mb-2 mt-2">
-          {prompt}
+          {prompt_typed}
         </div>
 
         <div className="font-extrabold text-md md:text-2xl mb-0 ">
@@ -51,6 +75,6 @@ export default function Project({ prompt, image, tags, flip, title, description,
               : <button className="disabled opacity-70 bg-gray-200 self-end py-3 px-5 text-xs md:text-sm font-medium text-center text-black rounded-lg bg-primary-700 sm:w-fit hover:bg-gray-400 hover:text-black dark:bg-primary-600 dark:hover:bg-primary-700">Launching soon!</button>
           }
       </div>
-    </div>
+    </animated.div>
   )
 }

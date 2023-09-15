@@ -7,7 +7,37 @@ import Diggr from '../assets/diggr2.png'
 import Attenda from '../assets/attendaBlank.png'
 import Alt from '../assets/AltBlank.png'
 
+import useObserver from '../hooks/useObserver'
+import useTyper from '../hooks/useTyper'
+
+import { useRef } from 'react'
+
+import {
+  useTransition,
+  useSpring,
+  useChain,
+  animated,
+  useSpringRef,
+} from '@react-spring/web';
+
+
 export default function Projects() {
+
+  const titleRef = useRef(null)
+  const observer = useObserver(titleRef, { freezeOnceVisible: true, threshold: 0.4 });
+
+  const title = useTyper('My projects:', observer?.isIntersecting, false)
+
+  const style = useSpring({
+    config: { duration: 500 },
+    from: { opacity: 0, transform: 'translateY(10%)' },
+    to: {
+      opacity: observer?.isIntersecting ? 1 : 0,
+      transform: observer?.isIntersecting ? 'translateY(0%)' : 'translateY(10%)',
+    },
+    delay: 50,
+  });
+
 
   const content = [
     {
@@ -60,9 +90,9 @@ export default function Projects() {
 
   return (
     <div className="flex flex-col w-full gap-4 mt-4">
-      <div className="font-bold text-xl md:text-4xl dark:text-gray-200">
-        My projects:
-      </div>
+      <animated.div ref={titleRef} style={style} className="font-bold text-xl md:text-4xl dark:text-gray-200">
+        {title}
+      </animated.div>
 
       <div className="flex flex-col gap-4">
       {
